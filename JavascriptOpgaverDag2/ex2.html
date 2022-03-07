@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .myDiv{
+            width: 25px;
+            height: 25px;
+            background-color: forestgreen;
+            margin: 2px;
+        }
+        p{
+            width: 100px;
+            height: 100px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+<p id="pID"></p>
+<div id="outer">
+<div id="div1" class="div1"></div>
+<div class="myDiv" id="div2"></div>
+<div class="myDiv" id="div3"></div>
+<div class="myDiv" id="div4"></div>
+<div class="myDiv" id="div5"></div>
+<div class="myDiv" id="div6"></div>
+<div class="myDiv" id="div7"></div>
+<div class="myDiv" id="div8"></div>
+<div class="myDiv" id="div9"></div>
+<div class="myDiv" id="div10"></div>
+    </div>
+
+<script>
+    /*document.getElementById("div1").onclick= (e)=> alert("hi from " + e.target.id)
+    document.getElementById("div2").onclick= (e)=> alert(e.target.id)
+    document.getElementById("div3").onclick= (e)=> alert(e.target.id)
+    document.getElementById("div4").onclick= (e)=> alert(e.target.id)
+    document.getElementById("div5").onclick= (e)=> alert(e.target.id)
+    document.getElementById("div6").onclick= (e)=> alert(e.target.id)
+    document.getElementById("div7").onclick= (e)=> alert(e.target.id)
+    document.getElementById("div8").onclick= (e)=> alert(e.target.id)
+    document.getElementById("div9").onclick= (e)=> alert(e.target.id)
+    document.getElementById("div10").onclick= (e)=> alert(e.target.id)*/
+
+    document.getElementById("outer").onclick= (e)=> {
+        if(e.target.id ==="outer"){
+            return
+        }else{
+            document.getElementById("pID").innerText = e.target.id
+        }
+    }
+
+</script>
+</body>
+
+</html>

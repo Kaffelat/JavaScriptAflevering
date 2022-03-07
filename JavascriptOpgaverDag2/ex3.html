@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="my-ul">
+
+</ul>
+<form>
+    <input type="text" id="txt"/>
+    <button id="add-btn">add name</button>
+    <button id="del-first-btn">delete first name</button>
+    <button id="del-last-btn">delete last name</button>
+
+</form>
+
+<script>
+    const names = ["Amanda", "Christian", "Peter", "Mark","Lars"]
+    function makeListItems() {
+        const listItems = names.map(name => "<li>" + name + "</li>")
+        const  filtered = names.filter(name=>name.length>4)
+        const itemsAsString = listItems.join("\n")
+        const myUl = document.getElementById("my-ul")
+        myUl.innerHTML = itemsAsString
+    }
+
+    makeListItems()
+    function addName(evt){
+        evt.preventDefault()
+        const inputField = document.getElementById("txt")
+        const newName = inputField.value
+        names.push(newName)
+        makeListItems()
+    }
+
+    function deleteFirstName(evt){
+        evt.preventDefault()
+        names.shift()
+        makeListItems()
+    }
+
+    function deleteLastName(evt){
+        evt.preventDefault()
+        names.pop()
+        makeListItems()
+    }
+
+    document.getElementById("del-first-btn").onclick = deleteFirstName
+    document.getElementById("del-last-btn").onclick = deleteLastName
+    document.getElementById("add-btn").onclick = addName
+</script>
+</body>
+</html>

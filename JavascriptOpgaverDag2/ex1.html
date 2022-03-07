@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 25px;
+            height: 25px;
+            border: 1px forestgreen;
+            margin: 2px;
+        }
+        button{
+            width: 25px;
+            height: 25px;
+        }
+    </style>
+</head>
+<body>
+<div id="d1"></div>
+<div id="d2"></div>
+<div id="d3"></div>
+<button id="testKnap"></button>
+<script>
+    function setColors(){
+        const divs = document.querySelectorAll("div")
+        divs[0].style.backgroundColor="black"
+        divs[1].style.backgroundColor="red"
+        divs[2].style.backgroundColor="pink"
+    }
+
+
+    //const testKnap = document.getElementById("testKnap")
+    //testKnap.onclick = setColors
+    //testKnap.onclick = document.
+    const divs = document.querySelectorAll("div")
+    //divs.forEach(div => div.style.backgroundColor="blue")
+    divs.forEach(function (d){
+        d.style.backgroundColor = "red"
+    })
+
+</script>
+
+</body>
+</html>
